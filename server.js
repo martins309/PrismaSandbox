@@ -1,5 +1,7 @@
+const express = require('express')
+
 //initializations
-const PORT = proccess.env.PORT || 3333
+const PORT = process.env.PORT || 3333
 const app = express()
 
 app.listen(PORT, () => {
