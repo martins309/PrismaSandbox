@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router()
+
 
 // Get user information fromn the databse
 
@@ -9,9 +9,7 @@ const router = express.Router()
 
 //Post new user information to the databse 
 
-router.post('/', (req, res) => {
-    
-})
+
 
 
 
