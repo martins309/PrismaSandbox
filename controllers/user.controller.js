@@ -1,4 +1,3 @@
-const express = require('express')
 const userModel = require('../models/user.model.js')
 
 // Get user information fromn the databse

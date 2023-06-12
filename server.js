@@ -1,4 +1,5 @@
 const express = require('express')
+const userRouter = require('./routes/user.routes')
 
 //initializations
 const PORT = process.env.PORT || 3333
@@ -11,6 +12,9 @@ app.listen(PORT, () => {
 //middleware
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+//Routes
+app.use('/user', userRouter)
 
 
 

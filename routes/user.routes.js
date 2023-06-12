@@ -9,7 +9,7 @@ const userController = require('../controllers/user.controller.js')
 
 
 //Post new user
-router.post('/user', userController.newUser)
+router.post('/', userController.newUser)
 
 
 //Edit user
@@ -17,3 +17,5 @@ router.post('/user', userController.newUser)
 
 
 //Delete User 
+
+module.exports = router
