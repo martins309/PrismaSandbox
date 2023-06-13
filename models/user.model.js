@@ -25,6 +25,20 @@ class User {
             
         }
     }
+
+    static async findUser(id) {
+        try {
+            const user = await prisma.users.findUnique({
+                where: {
+                    id: id
+                }
+            })
+            return user
+        } catch (error) {
+            console.error({msg: error.message})
+            
+        }
+    }
     
 }
 

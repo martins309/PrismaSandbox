@@ -1,7 +1,15 @@
 const userModel = require('../models/user.model.js')
 
 // Get user information fromn the databse
-
+const findUser = async (req, res) => {
+    const { id } = req.params.id
+    const response = await userModel.findUser(id)
+    if(response) {
+        res.json(response)
+    }else {
+        res.send("Cannot find user..")
+    }
+}
 
 
 
