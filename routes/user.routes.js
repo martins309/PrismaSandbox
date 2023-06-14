@@ -4,7 +4,7 @@ const userController = require('../controllers/user.controller.js')
 
 
 // Get User
-
+router.get('/:id', userController.findUser)
 
 
 

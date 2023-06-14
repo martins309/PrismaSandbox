@@ -30,8 +30,25 @@ class User {
         try {
             const user = await prisma.users.findUnique({
                 where: {
-                    id: id
+                    id: id,
+
                 }
+            })
+            return user
+        } catch (error) {
+            console.error({msg: error.message})
+            
+        }
+    }
+
+    static async updateUser(id, newData) {
+        try {
+            const user = await prisma.users.findUnique({
+                where: {
+                    id: id,
+
+                },
+                data: newData
             })
             return user
         } catch (error) {
