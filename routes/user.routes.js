@@ -7,15 +7,16 @@ const userController = require('../controllers/user.controller.js')
 router.get('/:id', userController.findUser)
 
 
-
 //Post new user
 router.post('/', userController.newUser)
 
-
 //Edit user
-
+router.put('/:id', userController.updateUser)
 
 
 //Delete User 
+router.delete('/:id', userController.delteUser)
+
+
 
 module.exports = router

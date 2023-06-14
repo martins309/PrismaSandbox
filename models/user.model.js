@@ -25,7 +25,7 @@ class User {
             
         }
     }
-
+    //finds user 
     static async findUser(id) {
         try {
             const user = await prisma.users.findUnique({
@@ -43,20 +43,36 @@ class User {
 
     static async updateUser(id, newData) {
         try {
-            const user = await prisma.users.findUnique({
+            const user = await prisma.users.update({
                 where: {
-                    id: id,
-
+                    id: 3,
                 },
-                data: newData
+                data: {
+                    first: "Mr. King",
+                    last: "Shit",
+                    email: "kittykittylicklick23@hotmail.com",
+                    license_number: "dznutz"
+                }
             })
             return user
         } catch (error) {
             console.error({msg: error.message})
-            
         }
     }
-    
+
+    static async delteUser(id) {
+        try {
+            const user = await prisma.users.delete({
+                where: {
+                    id: 3,
+                }
+            })
+            return user
+        } catch (error) {
+            console.error({msg: error.message})
+        }
+    }
+  
 }
 
 module.exports = User 
