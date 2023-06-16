@@ -60,11 +60,11 @@ class User {
         }
     }
 
-    static async delteUser(id) {
+    static async deleteUser(id) {
         try {
             const user = await prisma.users.delete({
                 where: {
-                    id: 3,
+                    id: 2,
                 }
             })
             return user

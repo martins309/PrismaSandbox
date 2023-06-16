@@ -15,7 +15,7 @@ router.put('/:id', userController.updateUser)
 
 
 //Delete User 
-router.delete('/:id', userController.delteUser)
+router.delete('/:id', userController.deleteUser)
 
 
 

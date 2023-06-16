@@ -44,7 +44,7 @@ const updateUser = async (req, res) => {
 
 //Delete that nigga from the database 
 
-const delteUser = async (req, res) => {
+const deleteUser = async (req, res) => {
     const { id } = req.params.id
     const response = await userModel.deleteUser(id)
     if(response) {
@@ -61,5 +61,5 @@ module.exports = {
     newUser,
     findUser,
     updateUser,
-    delteUser
+    deleteUser
 }
