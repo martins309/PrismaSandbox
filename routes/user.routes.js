@@ -4,7 +4,7 @@ const userController = require('../controllers/user.controller')
 
 
 //GET
-
+router.get('/:id', userController.findUser)
 
 
 //POST

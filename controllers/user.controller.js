@@ -2,7 +2,15 @@ const userModel = require('../models/user.model')
 
 
 //GET
-
+const findUser = async (req, res) => {
+    const { id } = req.params.id
+    const response = await userModel.findUsers(id)
+    if(response){
+        res.json(response)
+    }else{
+        res.send('cannot find user')
+    }
+}
 
 
 
@@ -26,5 +34,6 @@ const newUser = async (req, res) => {
 
 
 module.exports = {
-    newUser
+    newUser,
+    findUser
 }
