@@ -2,7 +2,7 @@ const express = require('express')
 
 // initialization
 
-const PORT = process.env || 8000
+const PORT = process.env.PORT || 8000
 const app = express()
 
 app.listen(PORT, () =>{
