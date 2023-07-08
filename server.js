@@ -1,4 +1,5 @@
 const express = require('express')
+const userRouter = require('./routes/user.routes')
 
 //initialization
 
@@ -13,6 +14,10 @@ app.listen(PORT, () => {
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+//routes
+
+app.use('/user', userRouter)
 
 module.exports = app
 
