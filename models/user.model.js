@@ -30,7 +30,7 @@ class User {
         try {
             const user = await prisma.users.findUnique({
                 where: {
-                    id: id,
+                    id: 1,
 
                 }
             })
