@@ -34,13 +34,14 @@ class User {
         try {
             const user = await prisma.users.findUnique({
                 where: {
-                    id: 1,
+                    id: id
 
                 },
             })
             return user
         } catch (error) {
             console.error({ msg: error.message })
+            
             
         }
     }
