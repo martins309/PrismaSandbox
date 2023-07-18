@@ -5,6 +5,7 @@ const userModel = require('../models/user.model')
 const findUserById = async (req, res) => {
     const { id } = req.params.id
     const response = await userModel.findUserById(id)
+    console.log(response)
     if(response){
         res.json(response)
     }else{
