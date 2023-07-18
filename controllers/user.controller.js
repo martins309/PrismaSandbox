@@ -2,9 +2,9 @@ const userModel = require('../models/user.model')
 
 
 //GET
-const findUser = async (req, res) => {
+const findUserById = async (req, res) => {
     const { id } = req.params.id
-    const response = await userModel.findUsers(id)
+    const response = await userModel.findUserById(id)
     if(response){
         res.json(response)
     }else{
@@ -35,5 +35,5 @@ const newUser = async (req, res) => {
 
 module.exports = {
     newUser,
-    findUser
+    findUserById
 }

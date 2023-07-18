@@ -30,7 +30,7 @@ class User {
     }
     //GET
 
-    static async findUsers(id) {
+    static async findUserById(id) {
         try {
             const user = await prisma.users.findUnique({
                 where: {
@@ -38,6 +38,9 @@ class User {
 
                 },
             })
+            if(!id) {
+                console.log("id is not found")
+            }
             return user
         } catch (error) {
             console.error({ msg: error.message })
