@@ -31,7 +31,6 @@ class User {
             const user = await prisma.users.findUnique({
                 where: {
                     id: 1,
-
                 }
             })
             return user
