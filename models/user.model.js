@@ -31,19 +31,16 @@ class User {
     //GET
 
     static async findUserById(id) {
-        if(!id){
-            console.log('id not found')
-        }
         try {
             const user = await prisma.users.findUnique({
                 where: {
-                    id
-                },
+                    id: parseInt(id)
+                }
             })
          
             return user
         } catch (error) {
-            console.error({ msg: "where is the id" })
+            console.error({ msg: error.message })
             
             
         }

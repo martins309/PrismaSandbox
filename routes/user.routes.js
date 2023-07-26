@@ -10,9 +10,13 @@ router.get('/:id', userController.findUserById)
 //POST
 router.post('/', userController.newUser)
 
+
 //PUT
 
 
+
 //DELETE
+
+git 
 
 module.exports = router
